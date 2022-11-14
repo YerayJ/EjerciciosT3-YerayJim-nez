@@ -5,7 +5,8 @@ import java.util.Scanner;
 /*
  * PRUEBAS
  * 0 veces : num = 1 / res-esperado = Hay un total de 0 números primos. / res = Hay un total de 0 números primos.
- * 
+ * 1 vez : num = 2 / res-esperado = Hay un total de 0 números primos. / res = Hay un total de 1 números primos.
+ * Varias veces : num = 9 / res-esperado = Hay un total de 4 números primos. / Hay un total de 4 números primos.
  */
 
 public class Ejercicio2 {
