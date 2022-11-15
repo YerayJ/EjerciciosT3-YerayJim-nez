@@ -12,24 +12,27 @@ import java.util.Scanner;
 public class Ejercicio3 {
     public static void main(String[] args) {
         // Creamos las variables num para pedirsela al usuario y un contador.
-        int num;
-        int contador = 0;
+        int size;
 
         // Creamos escaner
         Scanner key = new Scanner(System.in);
 
         // Pedimos las variables al usuario
-        System.out.println("Deme un número: ");
-        num = key.nextInt();
+        System.out.println("Deme un tamaño: ");
+        size = key.nextInt();
 
         // Creamos el primer bucle que recorre el rango entre la i y el número pasado
         // por pantalla.
-        for (int i = 2; i <= num; i++) {
+        for (int i = 1; i <= size; i++) {
+            for (int j = 1; j <= size-i ; j++) {
+                System.out.println(" ");
+            } 
+            for (int j = 0; j < args.length; j++) {
+                
+            }
             
             
         }
-        // Imprimimos resultado
-        System.out.println("Hay un total de " + contador + " números primos.");
 
         // Cerramos el escaner
         key.close();
