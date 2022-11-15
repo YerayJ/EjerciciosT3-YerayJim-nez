@@ -5,7 +5,8 @@ import java.util.Scanner;
 /*
  * PRUEBAS
  * 0 veces : num = 1 / res-esperado = Hay un total de 0 números primos. / res = Hay un total de 0 números primos.
- * 
+ * 1 veces : num = 2 / res-esperado = Hay un total de 1 números primos. / res = Hay un total de 1 números primos.
+ * 0 veces : num = 20 / res-esperado = Hay un total de 8 números primos. / res = Hay un total de 8 números primos.
  */
 
 public class Ejercicio2 {
@@ -13,9 +14,6 @@ public class Ejercicio2 {
         // Creamos las variables num para pedirsela al usuario y un contador.
         int num;
         int contador = 0;
-
-        // Creamos una variable de caracter booleano para los primos
-        boolean esPrimo = true;
 
         // Creamos escaner
         Scanner key = new Scanner(System.in);
@@ -27,8 +25,9 @@ public class Ejercicio2 {
         // Creamos el primer bucle que recorre el rango entre la i y el número pasado
         // por pantalla.
         for (int i = 2; i <= num; i++) {
-            // Cada vez que reiniciamos el bucle le devolvemos true a la variable esPrimo.
-            esPrimo = true;
+            // Damos por hecho que todos los números son primos y le añadimos uno siempre
+            // cada vuelta, ya después comprobaremos si es primo o no.
+            contador++;
             // Con esto comprobaremos si la i es primo. Empezando la j en 2, ya que sabemos
             // que el uno y el dos no son primos, e irá comprobando que el número los
             // números hasta la i.
@@ -36,16 +35,11 @@ public class Ejercicio2 {
                 // Con este if comprobamos que si al dividir la i entre la variable j da el
                 // resto 0, el número no es primo.
                 if (i % j == 0) {
-                    // Cambiaremos a false la variable es primo.
-                    esPrimo = false;
+                    // Si no es primo le vamos restando al contador uno.
+                    contador--;
                     // Salimos directamente de este bucle.
                     break;
                 }
-            } // Dentro del primer bucle, si al salir del segundo bucle la variable esPrimo
-              // sigue siendo true le sumamos al contador.
-            if (esPrimo) {
-                // Sumamos uno a la variable contador.
-                contador++;
             }
         }
         // Imprimimos resultado
