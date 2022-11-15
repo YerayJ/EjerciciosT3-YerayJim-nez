@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class Ejercicio5 {
     public static void main(String[] args) {
-        // Creamos la variable size para pedírsela al usuario.
+        // Creamos la variable a y b para pedírsela al usuario.
         int a, b;
 
         // Creamos escaner
