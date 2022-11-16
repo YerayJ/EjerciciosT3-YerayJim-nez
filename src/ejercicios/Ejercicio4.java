@@ -25,15 +25,16 @@ public class Ejercicio4 {
 
         // Crearemos el for donde la variable i dependerá de cual de los números sea
         // mayor, mientras el número sea positivo se irá ejecutando y irá en decremento.
-        for (int i = (a > b ? a : b); i > 0; i--) {
-            // Como tenemos que comprobar que las dos variables se puedan dividir y el resto de 0 
-            if (a % i == 0) {
-                if (b % i == 0) {
-                    // Y la primera que se puedan dividir entre los dos e imprimos el resultado de la i 
-                    System.out.println("El máximo común divisor de a y b es " + i);
-                    // Y imprimimos salimos ya del bucle.
-                    break;
-                }
+        for (int i = (a < b ? a : b); i > 0; i--) {
+            // Como tenemos que comprobar que las dos variables se puedan dividir y el resto
+            // de 0
+            if ((a % i == 0) && (b % i == 0)) {
+                // Y la primera que se puedan dividir entre los dos e imprimos el resultado de
+                // la i
+                System.out.println("El máximo común divisor de a y b es " + i);
+                // Y imprimimos salimos ya del bucle.
+                break;
+
             }
         }
 

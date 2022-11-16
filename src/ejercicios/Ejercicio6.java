@@ -18,28 +18,25 @@ import java.util.Scanner;
 public class Ejercicio6 {
     public static void main(String[] args) {
         // Creamos la variable num para pedírsela al usuario.
-        int num;
-
+        int num1,num2,mcm;
+        int mcd = 0;
         // Creamos escaner
         Scanner key = new Scanner(System.in);
 
         // Pedimos las variables al usuario
-        System.out.println("Dime un número: ");
-        num = key.nextInt();
+        System.out.println("Deme dos números: ");
+        num1 = key.nextInt();
+        num2 = key.nextInt();
 
-        // Creamos un if para que el rango este dentro de 0 a 20
-        if (num <= 20 && num >= 0) {
-            // El primer bucle comprobamos de que número a que número tenemos que recorrer.
-            for (int i = 1; i <= num; i++) {
-                // En este bucle imprimos el número correspondiente, las veces que se imprima
-                // dependerán del número que sea.
-                for (int j = 1; j <= i; j++) {
-                    // Imprimimos el número por pantalla en la misma línea
-                    System.out.print(i);
-                } // Imprimimos una línea para que baje a la siguiente.
-                System.out.println();
-            }
+        // Creamos un for
+        for (int i = 1; i <= num1 && i <= num2; i++) {
+            if (num1 % i == 0 && num2 % i == 0) {
+                mcd=i;
+ 
+            } 
         }
+        mcm = (num1*num2/mcd);
+        System.out.println("El mínimo común múltiplo es " + mcm);  
         // Cerramos el escaner
         key.close();
     }
