@@ -4,9 +4,15 @@ import java.util.Scanner;
 
 /*
  * PRUEBAS
- * 0 veces : a = 0 b = 0 / res-esperado =  / res = 
- * 1 vez : a = 21 b = 21 / res-esperado = El mínimo común múltiplo de a y b es 1. / res = El mínimo común múltiplo de a y b es 1.
- * Varias veces : a = 27 b = 45 / res-esperado = El mínimo común múltiplo de a y b es 3 / res = El mínimo común múltiplo de a y b es 3
+ * 0 veces : num= -1 / res-esperado = . / res = . 
+ * 1 vez : num= 1 / res-esperado = 1 / res = 1 
+ * Varias veces : num = 3 / 
+ * res-esperado = 1
+ *                22
+ *                333
+ * res          = 1
+ *                22
+ *                333
  */
 
 public class Ejercicio6 {
@@ -23,12 +29,14 @@ public class Ejercicio6 {
 
         // Creamos un if para que el rango este dentro de 0 a 20
         if (num <= 20 && num >= 0) {
-            // El primer bucle 
-            for (int i = 0; i < num; i++) {
+            // El primer bucle comprobamos de que número a que número tenemos que recorrer.
+            for (int i = 1; i <= num; i++) {
+                // En este bucle imprimos el número correspondiente, las veces que se imprima
+                // dependerán del número que sea.
                 for (int j = 1; j <= i; j++) {
+                    // Imprimimos el número por pantalla en la misma línea
                     System.out.print(i);
-                    
-                }
+                } // Imprimimos una línea para que baje a la siguiente.
                 System.out.println();
             }
         }
