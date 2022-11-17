@@ -23,13 +23,11 @@ public class Ejercicio8 {
         // Pedimos las variable al usuario
         System.out.println("Deme un número inicial: ");
         num = key.nextInt();
-
+        dado = num;
         // Creamos un bucle en el que se va ejecutando mientras num sea mayor que 0.
         for (int i = 0; num > 0; i++) {
             // Por cada vuelta al bucle le añadimos uno al contador.
             contador++;
-            // Crearemos un número aletorio por cada vuelta de rango del 1 al 100
-            dado = (int) (Math.random() * 99 + 1);
             // En este if contaremos los fallos, para ello num debe ser menor que el dado.
             if (num < dado) {
                 // Acumulamos uno en la variable fallo.
@@ -37,6 +35,7 @@ public class Ejercicio8 {
                 // Imprimimos que el usuario ha fallado.
                 System.out.println("Fallo es menor");
             } // Volvemos a pedir el número al usuario en cada vuelta.
+            dado = num;
             System.out.print("Deme un número: ");
             num = key.nextInt();
         } // Por último mostramos el número total de número introducidos y fallos.
