@@ -7,7 +7,7 @@ import java.util.Scanner;
  * 0 veces : num= 0 / res-esperado = El número es menor que 0 / res = El número es menor que 0
  * 1 vez : num= 1 / res-esperado = El número tiene: 1 cifras / res = El número tiene: 1 cifras
  * Varias veces : num = 3400 / res-esperado = El número tiene: 4 cifras / res = El número tiene: 4 cifras
- */
+  */
 
 public class Ejercicio9 {
     public static void main(String[] args) {
