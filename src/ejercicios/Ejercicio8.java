@@ -8,7 +8,6 @@ import java.util.Scanner;
  * 1 vez : num= 15 num = 0 / res-esperado = Total de número introducidos 1 Número de fallos 1 / res = Total de número introducidos 1 Número de fallos 1 
  * Varias veces : num = 99 num = 14 num= 80 num = 0 / Total de número introducidos 3 Número de fallos 1 / Total de número introducidos 3 Número de fallos 1 
  */
-
 public class Ejercicio8 {
     public static void main(String[] args) {
         // Creamos la variable num para pedírsela al usuario.
